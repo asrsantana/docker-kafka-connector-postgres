@@ -206,7 +206,7 @@ CREATE TABLE usuarios (
 ```
 
 ### 6. Configurar o Kafka Connect JDBC Source
-
+Execute o comando abaixo (bash)
 ```bash
 curl -X POST http://localhost:8083/connectors \
   -H "Content-Type: application/json" \
