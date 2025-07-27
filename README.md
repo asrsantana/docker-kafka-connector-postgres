@@ -115,7 +115,7 @@ Deve aparecer o tópico: `postgres-usuarios`
 
 #### 9.1. Acessar o terminal do kafka-tools
 ```bash
-  docker exec -it kafka-tools bash
+  docker exec --user root -it kafka-tools bash
 ```
 
 #### 9.2. No terminal, deixe o consumer rodando:
@@ -172,5 +172,18 @@ curl http://localhost:8083/connectors/postgres-source-connector/status
 
 # Deletar e recriar o conector
 curl -X DELETE http://localhost:8083/connectors/postgres-source-connector
-# Executar novamente o comando do passo 5
+# Executar novamente o comando do passo 6
+
+# Caso o problema persista, é possível ainda remover os containers e os volumes e subir novamente
+# Nesse caso, as mensagem já existentes serão perdidas e será necessário configurar o conector novamente (passo 6)
+docker stop kafka-connector
+docker stop broker
+
+docker rm -v kafka-connector
+docker rm -v broker
+
+# Execute o docker-compose novamente
+
 ```
+
+
