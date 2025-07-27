@@ -102,7 +102,7 @@ INSERT INTO usuarios (nome, email) VALUES
 SELECT * FROM usuarios;
 ```
 
-### 8.2. Verificar se o tópico foi criado no Kafka
+#### 8.2. Verificar se o tópico foi criado no Kafka
 
 ```bash
 # Listar tópicos
