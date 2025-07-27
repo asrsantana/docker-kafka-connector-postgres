@@ -190,7 +190,7 @@ Se retornar informações sobre o Kafka Connect, prossiga para o próximo passo.
  
 - Criar uma nova conexão 
 
-![screenshot](/kafka/images/config-postgres-connection.png)
+![screenshot](/images/config-postgres-connection.png)
 
 ### 5. Criar o banco de dados e tabela no PostgreSQL
 
